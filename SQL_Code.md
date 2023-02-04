@@ -4,8 +4,8 @@
 
 Llamar dato de tabla
 
-´´´sql
+```sql
 SELECT population 
 FROM world
 WHERE name = 'Germany'
-´´´
+
