@@ -69,6 +69,8 @@ WHERE name IN ('Sweden', 'Norway', 'Denmark')
 
 ![Aprendiendo](http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ)
 
+![Aprendiendo](https://cdn-icons-png.flaticon.com/512/2306/2306173.png)
+
 
 
 
