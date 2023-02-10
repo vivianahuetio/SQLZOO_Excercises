@@ -2,7 +2,7 @@
 
 ## Ejercicio 1
 
-Llamar dato de tabla
+Llamar dato de tabla: To show the population of Germany
 
 ```sql
 SELECT population 
