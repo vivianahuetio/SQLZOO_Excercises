@@ -59,6 +59,8 @@ WHERE area BETWEEN 200000 AND 250000
 
 
 
+
+
 # `SELECT FROM WORLD`
 
 
@@ -75,7 +77,7 @@ FROM world
 ## Ejercicio 2
 
 
-Comando WHERE para filtrar registros. Show the name for the countries that have a population of at least 200 millio
+Comando WHERE para filtrar registros. Show the name for the countries that have a population of at least 200 millions
 
 
 ```sql
@@ -92,6 +94,22 @@ WHERE population >= 200000000
 |India|
 |Indonesia|
 |United States|
+
+
+
+## Ejercicio 3
+
+
+Hacer Calculos en Columnas. Calculate per capita GDP[^1] for those countries with a population of at least 200 million.
+
+[^1]: My Per Capita GDP is the GDP divided by the population GDP/population
+
+
+```sql
+SSELECT name, gdp/population AS GDP
+FROM world
+WHERE population >= 200000000
+````
 
 
 
