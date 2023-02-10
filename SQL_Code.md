@@ -1,5 +1,6 @@
 # SELECT BASICS
 
+
 ## Ejercicio 1
 
 Comando **WHEN**, Mostrar una columna y una fila: Show the population of Germany
@@ -11,14 +12,9 @@ WHERE name = 'Germany'
 ```
 Ejemplo
 
-| Raza | Pelo | Tamaño | Personalidad |
-| --- | --- | --- | --- |
-| Labrador Retriever | Corto | Grande | Amigable |
-| Bulldog Francés | Corto | Mediano | Leal |
-| Golden Retriever | Largo | Grande | Juguetón |
-| Chihuahua | Corto | Pequeño | Vivaz |
-| Pastor Alemán | Medio | Mediano a Grande | Inteligente |
-
+| population |
+| --- | 
+| 80716000|
 
 
 ## Ejercicio 2
@@ -37,8 +33,6 @@ WHERE name IN ('Sweden', 'Norway', 'Denmark')
 |Denmark| 5634437 |
 |Norway |	5124383 |
 |Sweden |	9675885 |
-
-
 
 
 ## Ejercicio 3
