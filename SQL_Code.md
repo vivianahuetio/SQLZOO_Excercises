@@ -51,6 +51,17 @@ FROM World
 WHERE area BETWEEN 200000 AND 250000
 ````
 
+| Name | area |
+|--|--|
+|Belarus|	207600|
+|hana	|238533|
+|Guinea |	245857 |
+|Guyana |	214969|
+|Laos |	236800 |
+|Romania|	238391|
+|Uganda	|241550|
+|United Kingdom	|242900|
+
 
 
 
