@@ -1,4 +1,4 @@
-# SELECT BASICS
+# `SELECT BASICS`
 
 
 ## Ejercicio 1
@@ -59,6 +59,10 @@ WHERE area BETWEEN 200000 AND 250000
 
 
 
+# `SELECT FROM WORLD`
+
+
+## Ejercicio 1
 
 
 
