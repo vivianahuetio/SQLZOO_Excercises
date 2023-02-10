@@ -37,7 +37,7 @@ WHERE name IN ('Sweden', 'Norway', 'Denmark')
 
 ## Ejercicio 3
 
-Comando **BETWEEN** (Rangos): Show the country and the area for countries with an area between 200,000 and 250,000.
+Comando **BETWEEN**, **AND** (para rangos): Show the country and the area for countries with an area between 200,000 and 250,000.
 
 ```sql
 SELECT name, area
@@ -64,6 +64,34 @@ WHERE area BETWEEN 200000 AND 250000
 
 ## Ejercicio 1
 
+Comando SELECT Mostrar columnas de la tabla
+
+```sql
+SELECT name, continent, population 
+FROM world
+````
+
+
+## Ejercicio 2
+
+
+Comando WHERE para filtrar registros. Show the name for the countries that have a population of at least 200 millio
+
+
+```sql
+SELECT name 
+FROM world
+WHERE population >= 200000000
+```
+
+
+|name|
+|--|
+|Brazil|
+|China|
+|India|
+|Indonesia|
+|United States|
 
 
 
