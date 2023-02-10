@@ -24,6 +24,7 @@ Ejemplo
 ## Ejercicio 2
 
 Comando **IN** (comprobar si esta una palabra): Show the name and the population for 'Sweden', 'Norway' and 'Denmark'.
+
 ```sql
 SELECT name, population
 FROM world
@@ -40,6 +41,15 @@ WHERE name IN ('Sweden', 'Norway', 'Denmark')
 
 
 
+## Ejercicio 3
+
+Comando **BETWEEN** (Rangos): Show the country and the area for countries with an area between 200,000 and 250,000.
+
+```sql
+SELECT name, area
+FROM World
+WHERE area BETWEEN 200000 AND 250000
+````
 
 
 
@@ -58,16 +68,6 @@ WHERE name IN ('Sweden', 'Norway', 'Denmark')
 
 
 
-
-
-
-
-
-
-
-
-
-![Aprendiendo](http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ)
 
 ![Aprendiendo](https://cdn-icons-png.flaticon.com/512/2306/2306173.png)
 
