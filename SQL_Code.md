@@ -2,7 +2,7 @@
 
 ## Ejercicio 1
 
-Llamar dato de tabla: To show the population of Germany
+Comando **WHEN**, Mostrar una columna y una fila: Show the population of Germany
 
 ```sql
 SELECT population 
@@ -20,7 +20,62 @@ Ejemplo
 | Pastor Alemán | Medio | Mediano a Grande | Inteligente |
 
 
-![Perro Labrador Retriever](http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ)
+
+## Ejercicio 2
+
+Comando **IN** (comprobar si esta una palabra): Show the name and the population for 'Sweden', 'Norway' and 'Denmark'.
+```sql
+SELECT name, population
+FROM world
+WHERE name IN ('Sweden', 'Norway', 'Denmark')
+```
+
+
+| Name | Population |
+|---|---|
+|Denmark| 5634437 |
+|Norway |	5124383 |
+|Sweden |	9675885 |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+![Aprendiendo](http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ)
+
+
+
+
+
+
+
+
 
 
 
