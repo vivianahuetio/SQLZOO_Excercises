@@ -159,12 +159,13 @@ WHERE name IN ('France', 'Germany', 'Italy')
 |Germany|80716000|
 |Italy|	60782668|
 
+> Nota:  el **IN** filtra las filas donde el valor en la columna seleccionada en WHERE, es igual a alguno de los valores en la lista entre paréntesis
 
 
 ## Ejercicio 6
 
 
-Usar **WHERE, LIKE**, **%** para filtros de nombres en columnas. El **LIKE** es utilizado para **comparar patrones de cadenas de texto.
+Usar **WHERE, LIKE**, **%** para filtros de nombres en columnas. El **LIKE** es utilizado para **comparar patrones de cadenas de texto**.
 
 Ejemplo: Show the name and population for France, Germany, Italy
 
