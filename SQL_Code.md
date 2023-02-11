@@ -186,6 +186,53 @@ WHERE name LIKE '%United%'
 
 
 
+
+## Ejercicio 7
+
+
+Usar **WHERE, OR**, para condicionales. El operador lógico **OR** permite combinar varios criterios en una cláusula WHERE, y se utiliza para seleccionar aquellas **filas que cumplen con al menos uno de los criterioso**.
+
+Ejemplo: Two ways to be big: A country is big if it has an area of more than 3 million sq km or it has a population of more than 250 million. Show the countries that are big by area or big by population. Show name, population and area.
+
+
+```sql
+SELECT name, population, area
+FROM world
+WHERE area >= 3000000 OR population >=250000000
+````
+
+| name           | population      | area       |
+| -------------- | --------------- | ---------- |
+| Australia      | 23,545,500      | 7,692,024 km² |
+| Brazil         | 202,794,000     | 8,515,767 km² |
+| Canada         | 35,427,524      | 9,984,670 km² |
+| China          | 1,365,370,000   | 9,596,961 km² |
+| India          | 1,246,160,000   | 3,166,414 km² |
+| Indonesia      | 252,164,800     | 1,904,569 km² |
+| Russia         | 146,000,000     | 17,125,242 km² |
+| United States  | 318,320,000     | 9,826,675 km² |
+
+
+
+> Nota: En este caso, se seleccionarán aquellas filas donde la superficie es mayor a 3 millones de km^2 OR la población es mayor a 250 millones.
+
+
+
+## Ejercicio 8
+
+
+Usar **WHERE, OR**
+
+
+
+
+
+
+
+
+
+
+
 ![Aprendiendo](https://cdn-icons-png.flaticon.com/512/2306/2306173.png)
 
 
