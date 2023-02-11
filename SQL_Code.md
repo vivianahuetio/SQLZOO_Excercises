@@ -79,7 +79,7 @@ FROM world
 ## Ejercicio 2
 
 
-Comando WHERE para filtrar registros. Show the name for the countries that have a population of at least 200 millions
+Comando WHERE **para comparaciones númericas**. Show the name for the countries that have a population of at least 200 millions
 
 ```sql
 SELECT name 
@@ -95,6 +95,7 @@ WHERE population >= 200000000
 |Indonesia|
 |United States|
 
+> Nota: Para comparaciones numéricas, se pueden utilizar los operadores de comparación estándar, como > (mayor que), < (menor que), >= (mayor o igual que), <= (menor o igual que), = (igual a), y <> (diferente a)
 
 
 ## Ejercicio 3
@@ -106,7 +107,7 @@ Hacer **Calculos en Columnas con otra columna**. Calculate per capita GDP[^1] fo
 
 
 ```sql
-SSELECT name, gdp/population AS GDP
+SELECT name, gdp/population AS GDP
 FROM world
 WHERE population >= 200000000
 ````
@@ -163,13 +164,24 @@ WHERE name IN ('France', 'Germany', 'Italy')
 ## Ejercicio 6
 
 
-Usar **WHERE, IN** con varias ordenes. Show the name and population for France, Germany, Italy
+Usar **WHERE, LIKE**, **%** para filtros de nombres en columnas. El **LIKE** es utilizado para **comparar patrones de cadenas de texto.
+
+Ejemplo: Show the name and population for France, Germany, Italy
+
+```sql
+SELECT name
+FROM world
+WHERE name LIKE '%United%'
+````
+
+|name|
+|--|
+|United Arab Emirates|
+|United Kingdom|
+|United States|
 
 
-
-
-
-
+> Nota: Este código selecciona la columna name de la tabla countries y filtra solo aquellas filas cuyo valor en la columna name incluye la palabra "United". La cláusula LIKE es utilizada para comparar un patrón de búsqueda con los valores en la columna, y el signo de porcentaje (%) se utiliza como comodín para representar cualquier número de caracteres. Por lo tanto, el patrón '%United%' significa que se debo seleccionar todas las filas donde la palabra "United" aparezca en cualquier parte del valor en la columna name.
 
 
 
