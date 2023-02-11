@@ -100,7 +100,7 @@ WHERE population >= 200000000
 ## Ejercicio 3
 
 
-Hacer Calculos en Columnas. Calculate per capita GDP[^1] for those countries with a population of at least 200 million.
+Hacer **Calculos en Columnas con otra columna**. Calculate per capita GDP[^1] for those countries with a population of at least 200 million.
 
 [^1]: My Per Capita GDP is the GDP divided by the population GDP/population
 
@@ -113,10 +113,27 @@ WHERE population >= 200000000
 
 
 
+## Ejercicio 4
+
+
+Hacer **Calculos en Columnas con números externos**. Dividir con números direcamente en la columna. Divide the population by 1000000 to get population in millions.
 
 
 
 
+```sql
+SELECT name, population/1000000
+FROM world
+WHERE continent ='South America'
+
+
+````
+
+
+## Ejercicio 5
+
+
+Hacer Calculos en Columnas. Dividir con números direcamente en la columna. Divide the population by 1000000 to get population in millions.
 
 
 
