@@ -17,6 +17,7 @@ Ejemplo
 | 80716000|
 
 
+
 ## Ejercicio 2
 
 Comando **IN** (comprobar si esta una palabra): Show the name and the population for 'Sweden', 'Norway' and 'Denmark'.
@@ -28,11 +29,13 @@ WHERE name IN ('Sweden', 'Norway', 'Denmark')
 ```
 
 
+
 | Name | Population |
 |---|---|
 |Denmark| 5634437 |
 |Norway |	5124383 |
 |Sweden |	9675885 |
+
 
 
 ## Ejercicio 3
@@ -59,8 +62,6 @@ WHERE area BETWEEN 200000 AND 250000
 
 
 
-
-
 # `SELECT FROM WORLD`
 
 
@@ -74,18 +75,17 @@ FROM world
 ````
 
 
+
 ## Ejercicio 2
 
 
 Comando WHERE para filtrar registros. Show the name for the countries that have a population of at least 200 millions
-
 
 ```sql
 SELECT name 
 FROM world
 WHERE population >= 200000000
 ```
-
 
 |name|
 |--|
@@ -112,14 +112,10 @@ WHERE population >= 200000000
 ````
 
 
-
 ## Ejercicio 4
 
 
 Hacer **Calculos en Columnas con números externos**. Dividir con números direcamente en la columna. Divide the population by 1000000 to get population in millions.
-
-
-
 
 ```sql
 SELECT name, population/1000000
@@ -127,17 +123,48 @@ FROM world
 WHERE continent ='South America'
 ````
 
+| name                | population_mi |
+| ------------------- | -------------- |
+| Argentina           | 42.6695        |
+| Bolivia            | 10.027254      |
+| Brazil             | 202.794        |
+| Chile              | 17.773         |
+| Colombia           | 47.662         |
+| Ecuador            | 15.7742        |
+| Guyana             | 0.784894       |
+| Paraguay           | 6.783374       |
+| Peru               | 30.475144      |
+| Saint Vincent and the Grenadines | 0.109 |
+| Suriname           | 0.534189       |
+| Uruguay            | 3.286314       |
+| Venezuela          | 28.946101      |
+
+
 
 ## Ejercicio 5
 
 
-Usar WHERE con varias ordenes. Show the name and population for France, Germany, Italy
+Usar **WHERE, IN** con varias ordenes. Show the name and population for France, Germany, Italy
 
 ```sql
 SELECT name, population
 FROM world
 WHERE name IN ('France', 'Germany', 'Italy')
 ```
+
+|name|pupulation|
+|--|--|
+|France|65906000|
+|Germany|80716000|
+|Italy|	60782668|
+
+
+
+## Ejercicio 6
+
+
+Usar **WHERE, IN** con varias ordenes. Show the name and population for France, Germany, Italy
+
 
 
 
