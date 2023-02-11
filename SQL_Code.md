@@ -125,15 +125,20 @@ Hacer **Calculos en Columnas con números externos**. Dividir con números direc
 SELECT name, population/1000000
 FROM world
 WHERE continent ='South America'
-
-
 ````
 
 
 ## Ejercicio 5
 
 
-Hacer Calculos en Columnas. Dividir con números direcamente en la columna. Divide the population by 1000000 to get population in millions.
+Usar WHERE con varias ordenes. Show the name and population for France, Germany, Italy
+
+```sql
+SELECT name, population
+FROM world
+WHERE name IN ('France', 'Germany', 'Italy')
+```
+
 
 
 
