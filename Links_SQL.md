@@ -7,5 +7,6 @@
 Examples LIKE
 - (https://www.sqlshack.com/es/introduccion-y-resumen-del-operador-logico-sql-like/)
 - (https://learn.microsoft.com/es-es/sql/t-sql/language-elements/like-transact-sql?view=sql-server-ver16)
+- (https://estradawebgroup.com/Post/-Que-es-SQL-Like-y-para-que-sirve-/4274)
 
 
