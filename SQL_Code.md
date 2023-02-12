@@ -486,6 +486,8 @@ WHERE name LIKE '%a%'
    AND name LIKE '%o%'
    AND name LIKE '%u%'
   AND name NOT LIKE  '% %' ESCAPE '\'
+  ```
+  
   
 |name|
 | -- | 
