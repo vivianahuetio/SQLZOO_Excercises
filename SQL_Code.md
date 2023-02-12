@@ -467,13 +467,35 @@ WHERE LEFT(name,1) = LEFT(capital,1) AND name<>capital
 
 
 
+## Ejercicio 13
+
+Usar **LIKE** para buscar varias letras sin importar el orden en un registro.
+
+Ejemplo: Equatorial Guinea and Dominican Republic have all of the vowels (a e i o u) in the name. They don't count because they have more than one word in the name.
+Find the country that has all the vowels and no spaces in its name.
+You can use the phrase name NOT LIKE '%a%' to exclude characters from your results.
+The query shown misses countries like Bahamas and Belarus because they contain at least one 'a'
 
 
+```sql
+SELECT name
+   FROM world
+WHERE name LIKE '%a%'
+   AND name LIKE '%e%'
+   AND name LIKE '%i%'
+   AND name LIKE '%o%'
+   AND name LIKE '%u%'
+  AND name NOT LIKE  '% %' ESCAPE '\'
+  
+  |name|
+  | ---- | 
+|Mozambique|
 
+La siguiente consulta selecciona todas las filas de la tabla table_name en las que el campo field_name contiene exactamente dos palabras separadas por un espacio.
 
+El patrón '% %' coincide con una cadena que tenga dos secuencias de caracteres separadas por un espacio, y el carácter de escape '\' indica que el siguiente carácter ("%") no es un comodín.
 
-
-
+Ten en cuenta que esta consulta puede ser limitada y puede no funcionar correctamente en todos los casos, ya que no se está tomando en cuenta la longitud de las palabras o si hay más de un espacio en blanco entre ellas. En estos casos, puede ser necesario utilizar una solución más compleja, como una expresión regular o una función de manipulación de cadenas.
 
 
 
