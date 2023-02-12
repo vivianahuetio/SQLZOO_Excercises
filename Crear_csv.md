@@ -1,15 +1,16 @@
 # Revisar Datos Tabla
 
-1. Contenido de Filas
+1. **Contenido de Filas**
 
 ```sql
 SELECT COUNT(*) AS Num_Filas
 FROM world
 ```
 
+
 Resultado: 195 filas (rowns)
 
-2. Contenido de Columnas
+2. **Contenido de Columnas**
 
 ```sql
 SELECT COUNT(*) AS Num_Colum
@@ -21,8 +22,7 @@ Resultado: 8 Columnas (columns)
 >Nota: Esta consulta utiliza la vista **INFORMATION_SCHEMA.COLUMNS** para obtener información sobre las columnas en las tablas de una base de datos
 
 
-
-3. Número de Paises por Continente
+3. **Número de Paises por Continente**
 
 ```sql
 SELECT continent, COUNT(name) AS Num_paises
@@ -45,7 +45,7 @@ Caribbean | 11
 Eurasia   | 2
 
 
-4. Pasar información por continente
+4. **Pasar información por continente**
 
 Debido a que en SQLZOO solo muestran 50 filas, se deben pasar por grupos al formato text edit de la MAC
 
