@@ -49,6 +49,23 @@ Eurasia   | 2
 
 Debido a que en SQLZOO solo muestran 50 filas, se deben pasar por grupos al formato text edit de la MAC
 
+4.1 Para ello agrupo los más pequeños (que tienen entre 2 y 13 filas), así:
+
+```sql
+SELECT *
+FROM world
+WHERE Continent IN ('Eurasia', 'Caribbean', 'North America', 'South America')
+````
+Y luego voy generando y copiando la información de los continentess restantes, así:
+
+```sql
+SELECT *
+FROM world
+WHERE Continent = 'Asia'
+```
+...
+
+Luego, para copiar la información de 
 
 
 
