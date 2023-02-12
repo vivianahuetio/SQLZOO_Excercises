@@ -52,14 +52,14 @@ Eurasia   | 2
 
 Debido a que en SQLZOO solo muestran 50 filas, se deben pasar por grupos al formato text edit de la MAC
 
-4.1 Para ello agrupo los más pequeños (que tienen entre 2 y 13 filas), así:
+- Para ello agrupo los más pequeños (que tienen entre 2 y 13 filas), así:
 
 ```sql
 SELECT *
 FROM world
 WHERE Continent IN ('Eurasia', 'Caribbean', 'North America', 'South America')
 ````
-Y luego voy generando y copiando la información de los continentess restantes, así:
+- Luego voy generando y copiando la información de los continentess restantes, así:
 
 ```sql
 SELECT *
@@ -68,7 +68,23 @@ WHERE Continent = 'Asia'
 ```
 ...
 
-Luego, para copiar la información de 
+- Luego, para copiar la información de Africa, que tiene 53 filas, dividí la información por rangos con el comando **LIKE**, pidiendo que me entregara la información de los países de Africa que inician con las letras A a la J, y posterior los que no inician con estas con **NOT LIKE**.
+
+
+-- Para el rango A a J:
+```sql
+SELECT *
+FROM world
+WHERE Continent = 'Africa' AND name LIKE '[A-J]%'
+````
+
+-- Para los que no estan entre A y J:
+
+```sql
+SELECT *
+FROM world
+WHERE Continent = 'Africa' AND name LIKE '[A-J]%'
+
 
 
 
