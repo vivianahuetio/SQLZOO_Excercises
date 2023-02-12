@@ -45,6 +45,9 @@ Caribbean | 11
 Eurasia   | 2
 
 
+# Pasar Datos de Tabla
+
+
 4. **Pasar información por continente**
 
 Debido a que en SQLZOO solo muestran 50 filas, se deben pasar por grupos al formato text edit de la MAC
