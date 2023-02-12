@@ -50,7 +50,7 @@ Eurasia   | 2
 
 4. **Pasar información por continente**
 
-Debido a que en SQLZOO solo muestran 50 filas, se deben pasar por grupos al formato text edit de la MAC
+Debido a que en SQLZOO solo muestran 50 filas, se deben pasar por grupos de máximo 50 filas, al formato textedit/Excel de la MAC
 
 - Para ello agrupo los más pequeños (que tienen entre 2 y 13 filas), así:
 
@@ -84,6 +84,16 @@ WHERE Continent = 'Africa' AND name LIKE '[A-J]%'
 SELECT *
 FROM world
 WHERE Continent = 'Africa' AND name LIKE '[A-J]%'
+
+
+5. Nombrar Archivo com CSV. 
+
+En el archivo de Excel o Texedit, guardo el archivo con la extensión .csv (valores separados por comas).
+
+
+6. Cargar el archivo .csv en el GitHub
+
+7. Cargar el archivo en el postgreSQL
 
 
 
