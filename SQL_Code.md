@@ -487,8 +487,8 @@ WHERE name LIKE '%a%'
    AND name LIKE '%u%'
   AND name NOT LIKE  '% %' ESCAPE '\'
   
-  |name|
-  | ---- | 
+|name|
+| -- | 
 |Mozambique|
 
 La siguiente consulta selecciona todas las filas de la tabla table_name en las que el campo field_name contiene exactamente dos palabras separadas por un espacio.
