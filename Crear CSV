@@ -1,0 +1,11 @@
+# Revisando Tabla
+
+1. Contar las filas de la tabla
+
+´´´sql
+SELECT COUNT(*)
+FROM world
+´´´
+Resultado: 195 Filas (Rowns)
+
+2. 
