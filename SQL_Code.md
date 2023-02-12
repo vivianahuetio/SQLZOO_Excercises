@@ -112,6 +112,16 @@ FROM world
 WHERE population >= 200000000
 ````
 
+| name       | GDP         |
+| ---------- | ----------- |
+| Brazil     | 11115.265   |
+| China      | 6121.711    |
+| India      | 1504.793    |
+| Indonesia  | 3482.020    |
+| United States | 51032.295 |
+
+
+
 
 ## Ejercicio 4
 
@@ -258,13 +268,13 @@ WHERE (area > 3000000 XOR population > 250000000);
 
 *En PostgreSQL*
 SELECT name, population, area
-FROM countries
+FROM world
 WHERE (area > 3000000) IS NOT (population > 250000000);
 
 
 *En SQL Server*
 SELECT name, population, area
-FROM countries
+FROM world
 WHERE ((area > 3000000) AND (population <= 250000000))
    OR ((area <= 3000000) AND (population > 250000000));
 
@@ -286,6 +296,78 @@ SELECT name, ROUND(population/1000000,2) AS population_mill, ROUND(GDP/100000000
 FROM world
 WHERE continent = 'South America'
 ```
+
+name             | population_mil | GDP_bill |
+|------------------|----------------|----------|
+| Argentina        | 42.67          | 477.03   |
+| Bolivia         | 10.03          | 27.04    |
+| Brazil          | 202.79         | 2254.11  |
+| Chile           | 17.77          | 268.31   |
+| Colombia        | 47.66          | 369.81   |
+| Ecuador         | 15.77          | 87.5     |
+| Guyana          | 0.78           | 2.85     |
+| Paraguay        | 6.78           | 25.94    |
+| Peru            | 30.48          | 204.68   |
+| Saint Vincent and the Grenadines | 0.11      | 0.69     |
+| Suriname        | 0.53           | 5.01     |
+| Uruguay         | 3.29           | 49.92    |
+| Venezuela       | 28.95          | 382.42   |
+
+
+
+## Ejercicio 10
+
+
+Usar **ROUND**, para redondear a las miles, es decir con número **negativo**, cuando los número son muy grandes.
+
+
+Show the name and per-capita GDP for those countries with a GDP of at least one trillion (1000000000000; that is 12 zeros). Round this value to the nearest 1000.
+
+Show per-capita GDP for the trillion dollar countries to the nearest $1000.
+
+```sql
+SELECT name, ROUND(gdp/population,-3) AS GDP_percapita_trill
+FROM world
+WHERE GDP>=1000000000000
+```
+
+| Name | GDP per capita (in USD) |
+| ---- | ----------------------- |
+| Australia | 66,000 |
+| Brazil | 11,000 |
+| Canada | 45,000 |
+| China | 6,000 |
+| France | 40,000 |
+| Germany | 42,000 |
+| India | 2,000 |
+| Italy | 33,000 |
+| Japan | 47,000 |
+| Mexico | 10,000 |
+| Russia | 14,000 |
+| South Korea | 22,000 |
+| Spain | 28,000 |
+| United Kingdom | 39,000 |
+| United States | 51,000 |
+
+
+
+>Nota: En esta consulta, primero se divide el valor de GDP por population para calcular el PIB per cápita. Luego, se usa la función ROUND para redondear el resultado a la milésima más cercana, utilizando el -3 para especificar que se quiere redondear a las miles. Finalmente, se filtran solo aquellos países con un PIB igual o superior a 1000000000000 utilizando la cláusula WHERE.
+
+
+## Ejercicio 11
+
+
+Usar **LENGHT** o LEN para contar carácteres.
+
+
+
+
+
+
+
+
+
+
 
 
 
