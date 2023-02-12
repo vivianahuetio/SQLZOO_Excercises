@@ -3,7 +3,7 @@
 
 ## Ejercicio 1
 
-Comando **WHEN**, Mostrar una columna y una fila: Show the population of Germany
+Comando **WHERE**, Mostrar una columna y una fila: Show the population of Germany
 
 ```sql
 SELECT population 
@@ -221,9 +221,71 @@ WHERE area >= 3000000 OR population >=250000000
 ## Ejercicio 8
 
 
-Usar **WHERE, OR**
+Usar **WHERE, **XOR**, Condicional Excluyente. El operador XOR es un operador lógico que se evalúa como verdadero cuando una de las expresiones es verdadera y la otra es falsa.
+
+Ejemplo: Exclusive OR (XOR). Show the countries that are big by area (more than 3 million) or big by population (more than 250 million) but not both. Show name, population and area.
+
+Australia has a big area but a small population, it should be included.
+Indonesia has a big population but a small area, it should be included.
+China has a big population and big area, it should be excluded.
+United Kingdom has a small population and a small area, it should be excluded
 
 
+```sql
+SELECT name, population, area
+FROM world
+WHERE ((area > 3000000) AND (population <= 250000000))
+   OR ((area <= 3000000) AND (population > 250000000))
+```
+
+| name         | population   | area        |
+| ------------ | ------------ | ----------- |
+| Australia    | 23545500     | 7692024     |
+| Brazil       | 202794000    | 8515767     |
+| Canada       | 35427524     | 9984670     |
+| Indonesia    | 252164800    | 1904569     |
+| Russia       | 146000000    | 17125242    |
+
+
+>Nota: En este caso, la consulta selecciona todas las filas de la tabla de países que cumplen con la condición de que la superficie sea mayor a 3 millones de km² o la población sea mayor a 250 millones de habitantes, pero no ambos.
+
+En diferentes bases de datos:
+
+*En MySQL*
+SELECT name, population, area
+FROM world
+WHERE (area > 3000000 XOR population > 250000000);
+
+*En PostgreSQL*
+SELECT name, population, area
+FROM countries
+WHERE (area > 3000000) IS NOT (population > 250000000);
+
+
+*En SQL Server*
+SELECT name, population, area
+FROM countries
+WHERE ((area > 3000000) AND (population <= 250000000))
+   OR ((area <= 3000000) AND (population > 250000000));
+
+
+
+## Ejercicio 9
+
+
+Usar **ROUND**, para redondear un número en determinado número de decimales.
+
+Show the name and population in millions and the GDP in billions for the countries of the continent 'South America'. Use the ROUND function to show the values to two decimal places.
+
+For South America show population in millions and GDP in billions both to 2 decimal places.
+Millions and billions
+Divide by 1000000 (6 zeros) for millions. Divide by 1000000000 (9 zeros) for billions.
+
+```sql
+SELECT name, ROUND(population/1000000,2) AS population_mill, ROUND(GDP/1000000000,2) AS GDP_bill
+FROM world
+WHERE continent = 'South America'
+```
 
 
 
