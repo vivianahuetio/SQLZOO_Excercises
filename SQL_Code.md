@@ -321,7 +321,7 @@ name             | population_mil | GDP_bill |
 Usar **ROUND**, para redondear a las miles, es decir con número **negativo**, cuando los número son muy grandes.
 
 
-Show the name and per-capita GDP for those countries with a GDP of at least one trillion (1000000000000; that is 12 zeros). Round this value to the nearest 1000.
+Ejemplo: Show the name and per-capita GDP for those countries with a GDP of at least one trillion (1000000000000; that is 12 zeros). Round this value to the nearest 1000.
 
 Show per-capita GDP for the trillion dollar countries to the nearest $1000.
 
@@ -357,9 +357,113 @@ WHERE GDP>=1000000000000
 ## Ejercicio 11
 
 
-Usar **LENGHT** o LEN para contar carácteres.
+Usar **LENGHT** o **LEN** para **contar carácteres** de una cádena de **texto**.
 
 
+Ejemplo: Greece has capital Athens.
+
+Each of the strings 'Greece', and 'Athens' has 6 characters.
+
+Show the name and capital where the name and the capital have the same number of characters.
+
+You can use the LENGTH function to find the number of characters in a string
+For Microsoft SQL Server the function LENGTH is LEN
+
+
+Código general:
+
+SELECT name, LENGTH(name), continent, LENGTH(continent), capital, LENGTH(capital)
+  FROM world
+ WHERE name LIKE 'G%'
+ 
+Pero este código seleccionará el nombre, la longitud del nombre, el continente, la longitud del continente, la capital y la longitud de la capital para aquellos países cuyo nombre comience con la letra "G", por tanto no aplica.
+ 
+ 
+ El Código correcto para el ejemplo es:
+ 
+ ´´´sql
+SELECT name, LEN(name) AS num_país, capital, LEN(capital) AS num_Capital
+FROM world
+WHERE LEN(name) = LEN(capital)
+´´´
+
+| name        | capital       |
+|-------------|---------------|
+| Algeria     | Algiers       |
+| Angola      | Luanda        |
+| Armenia     | Yerevan       |
+| Botswana    | Gaborone      |
+| Canada      | Ottawa        |
+| Djibouti    | Djibouti      |
+| Egypt       | Cairo         |
+| Estonia     | Tallinn       |
+| Fiji        | Suva          |
+| Gambia      | Banjul        |
+| Georgia     | Tbilisi       |
+| Ghana       | Accra         |
+| Greece      | Athens        |
+| Luxembourg  | Luxembourg    |
+| Mauritania  | Nouakchott    |
+| Paraguay    | Asunción      |
+| Peru        | Lima          |
+| Poland      | Warsaw        |
+| Russia      | Moscow        |
+| Rwanda      | Kigali        |
+| San Marino  | San Marino    |
+| Singapore   | Singapore     |
+| Taiwan      | Taipei        |
+| Togo        | Lomé          |
+| Turkey      | Ankara        |
+| Zambia      | Lusaka        |
+
+
+El lenght se utiliza en`WHERE` para filtrar los registros basados en la condición de que la longitud de `name` sea igual a la longitud de `capital`. La función `LENGTH` se utiliza para calcular el número de caracteres en cada columna. 
+
+
+
+
+## Ejercicio 12
+
+Usar **LEFT** para aislar el **primer** carácter de una palabra. EN el where pueden ir varias funciones.
+
+Ejemplo: The capital of Sweden is Stockholm. Both words start with the letter 'S'.
+
+Show the name and the capital where the first letters of each match. Don't include countries where the name and the capital are the same word.
+You can use the function LEFT to isolate the first character.
+You can use <> as the NOT EQUALS operator.
+
+```sql
+SELECT name, capital
+FROM world
+WHERE LEFT(name,1) = LEFT(capital,1) AND name<>capital
+````
+
+| name       | capital         |
+|------------|-----------------|
+| Algeria    | Algiers        |
+| Andorra    | Andorra la Vella |
+| Barbados   | Bridgetown      |
+| Belize     | Belmopan        |
+| Brazil     | Brasília        |
+| Brunei     | Bandar Seri Begawan |
+| Burundi    | Bujumbura       |
+| Guatemala  | Guatemala City  |
+| Guyana     | Georgetown      |
+| Kuwait     | Kuwait City     |
+| Maldives   | Malé            |
+| Marshall Islands | Majuro   |
+| Mexico     | Mexico City     |
+| Monaco     | Monaco-Ville    |
+| Mozambique | Maputo          |
+| Niger      | Niamey          |
+| Panama     | Panama City     |
+| Papua New Guinea | Port Moresby |
+| Sao Tomé and Príncipe | São Tomé |
+| South Korea | Seoul          |
+| Sri Lanka  | Sri Jayawardenepura Kotte |
+| Sweden     | Stockholm       |
+| Taiwan     | Taipei          |
+| Tunisia    | Tunis           |
 
 
 
